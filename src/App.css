@@ -1,0 +1,119 @@
+.app-shell {
+  min-height: 100vh;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.banner {
+  padding: var(--space-32);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.banner h1 {
+  margin: 0 0 var(--space-16);
+  font-size: 2rem;
+}
+
+.banner p {
+  margin: 0;
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-16);
+  padding: var(--space-32);
+}
+
+.panel {
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-16);
+}
+
+.record-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-16);
+}
+
+.record-item {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-16);
+}
+
+.record-item h3 {
+  margin: 0 0 var(--space-16);
+  font-size: 1rem;
+}
+
+.record-item p {
+  margin: 0 0 var(--space-16);
+}
+
+.record-item p:last-child {
+  margin-bottom: 0;
+}
+
+.field-group {
+  display: grid;
+  gap: 8px;
+  margin-bottom: var(--space-16);
+}
+
+.field-label {
+  font-weight: 600;
+}
+
+input,
+button {
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  padding: 12px;
+  background: var(--color-panel);
+  color: var(--color-text);
+}
+
+input[aria-invalid='true'] {
+  border-color: var(--color-error);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.error-text {
+  color: var(--color-error);
+  margin: 0 0 var(--space-16);
+}
+
+.empty-state,
+.status {
+  margin: 0;
+  padding: var(--space-16);
+  border: 1px dashed var(--color-border);
+  border-radius: 8px;
+  background: var(--color-panel);
+}
+
+@media (max-width: 768px) {
+  .banner,
+  .layout {
+    padding: var(--space-16);
+  }
+}
